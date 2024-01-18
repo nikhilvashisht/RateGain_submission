@@ -22,6 +22,7 @@ import Overview from "./components/overview";
 import FormCreator from "./components/forms";
 import Tracker from "./components/tracking";
 import { NavLink, BrowserRouter, Routes, Route } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 ChartJS.register(
   ArcElement,
@@ -92,7 +93,8 @@ const lineData = {
 
 const DashboardPage = () => {
   const [index, setIndex] = useState(0);
-
+  const navigate = useNavigate();
+  
   const compArr = (index) => {
     if (index == 0) return <Overview />;
     else if (index == 1) return <FormCreator />;
@@ -142,19 +144,24 @@ const DashboardPage = () => {
           </button>
           <button
             className="flex justify-evely py-4"
-            onClick={() => setIndex(2)}
+            onClick={() => {
+              setIndex(2);
+            }}
           >
             <FontAwesomeIcon icon={faServer} size="lg" color="black" />
             <p className="px-3 text-xl text-brand-dark font-bold">Tracking</p>
           </button>
-          <div className="flex justify-evely py-4 mt-96">
+          <button
+            className="flex justify-evely py-4 mt-96"
+            onClick={() => navigate("/")}
+          >
             <FontAwesomeIcon
               icon={faRightFromBracket}
               size="lg"
               color="black"
             />
             <p className="px-3 text-xl text-brand-dark font-bold">Logout</p>
-          </div>
+          </button>
         </aside>
 
         {/* Main content */}

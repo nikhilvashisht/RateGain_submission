@@ -28,7 +28,7 @@ const LoginPage = () => {
         </div>
 
         {/* Login form */}
-        <div className="bg-brand-white rounded-lg shadow-xl p-8 mr-24">
+        <div className="bg-brand-white rounded-lg shadow-2xl p-8 mr-24">
           <form className="space-y-6">
             <div>
               <label
