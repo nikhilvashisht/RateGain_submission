@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGoogle, FaFacebook } from "react-icons/fa"; // Using react-icons for icons
-import togglecomponent from "./App";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const LoginPage = () => {
   const navigate = useNavigate();

@@ -5,7 +5,7 @@ import {
   AiOutlineSetting,
 } from "react-icons/ai";
 import { BiBarChartAlt2 } from "react-icons/bi";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   BarChart,
   Bar,
@@ -21,10 +21,9 @@ import {
   FaUserCircle,
   FaRegHeart,
   FaRegCreditCard,
-  FaShoppingBag,
 } from "react-icons/fa";
-import { BiLogOut, BiMessageSquareDetail, BiHeart } from "react-icons/bi";
-import { MdFavorite, MdMessage, MdSettings } from "react-icons/md";
+import { BiLogOut, BiMessageSquareDetail} from "react-icons/bi";
+
 import {
   IoBagOutline,
   IoSettingsOutline,

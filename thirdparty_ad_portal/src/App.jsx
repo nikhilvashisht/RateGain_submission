@@ -1,5 +1,4 @@
 import "./App.css";
-import React, { useState } from "react";
 import Dashboard from "./dashboard";
 import LoginPage from "./loginpage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
