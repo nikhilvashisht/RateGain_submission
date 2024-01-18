@@ -46,31 +46,36 @@ const adsData = [
     title: "Toyota Fielder",
     price: "160.00",
     category: "Home & Living",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://imgctcf.aeplcdn.com/thumbs/p-nc-p-s500-ver4/images/cars/Toyota-Corolla-Cross.JPG?q=75",
   },
   {
     title: "Samsung Galaxy S21",
     price: "799.00",
     category: "Electronics",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://fdn.gsmarena.com/imgroot/reviews/21/samsung-galaxy-s21-ultra/lifestyle/-1200w5/gsmarena_003.jpg",
   },
   {
     title: "Leather Sofa",
     price: "299.99",
     category: "Furniture",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://5.imimg.com/data5/SELLER/Default/2023/3/292368048/MT/PU/VB/3675667/leather-sofa-set.png",
   },
   {
     title: "Mountain Bike",
     price: "475.00",
     category: "Sports & Outdoors",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://hips.hearstapps.com/hmg-prod/images/ride-mountain-bike-shorts-642ade5f2f26d.jpg?crop=0.501xw:1.00xh;0.193xw,0&resize=640:*",
   },
   {
     title: "Professional Camera",
     price: "1220.00",
     category: "Photography",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://i.pinimg.com/originals/e7/5d/db/e75ddbda351d44e24b6b8099fa200aad.jpg",
   },
 ];
 
@@ -160,7 +165,7 @@ const ActivityItem = ({ icon, text, link }) => {
 const AdItem = ({ title, price, category, imageUrl }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4">
-      <img src={imageUrl} alt="Ad" className="h-12 w-12 object-cover" />
+      <img src={imageUrl} alt="Ad" className="h-16 w-16 object-cover rounded" />
       <div>
         <h5 className="text-md font-semibold">{title}</h5>
         <p className="text-sm text-gray-500">{category}</p>
@@ -416,8 +421,26 @@ const PostAdForm = () => {
           </label>
           <div className="flex items-center">
             {/* Placeholder for uploaded images */}
-            <div className="p-4 border rounded-lg mr-2">Image 1</div>
-            <div className="p-4 border rounded-lg mr-2">Image 2</div>
+            <div className="p-2 border rounded-lg mr-2">
+              <img
+                src={
+                  "https://i.pinimg.com/originals/e7/5d/db/e75ddbda351d44e24b6b8099fa200aad.jpg"
+                }
+                alt="Ad"
+                className="h-16 w-16 object-cover
+              rounded"
+              />
+            </div>
+            <div className="p-2 border rounded-lg mr-2">
+              <img
+                src={
+                  "https://imgeng.jagran.com/images/2022/nov/Best%20Cameras%20For%20Photography1669186135779.jpg"
+                }
+                alt="Ad"
+                className="h-16 w-16 object-cover
+              rounded"
+              />
+            </div>
             {/* Upload Button */}
             <button
               onClick={handleImageUpload}
