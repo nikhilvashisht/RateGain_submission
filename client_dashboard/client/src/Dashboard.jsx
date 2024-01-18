@@ -22,7 +22,7 @@ import Overview from "./components/overview";
 import FormCreator from "./components/forms";
 import Tracker from "./components/tracking";
 import { NavLink, BrowserRouter, Routes, Route } from "react-router-dom";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 ChartJS.register(
   ArcElement,
@@ -94,7 +94,7 @@ const lineData = {
 const DashboardPage = () => {
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
-  
+
   const compArr = (index) => {
     if (index == 0) return <Overview />;
     else if (index == 1) return <FormCreator />;
@@ -126,33 +126,70 @@ const DashboardPage = () => {
     <div className="bg-gray-100 h-full text-white">
       <div className="flex">
         {/* Sidebar */}
-        <aside className="h-full bg-white w-64 py-6 px-6">
-          <h2 className="font-bold text-brand-dark py-3 text-3xl">Dashboard</h2>
+        <aside className="h-full bg-white w-64 py-6 ">
+          <h2 className="font-bold text-brand-dark py-3 text-3xl px-6">
+            Dashboard
+          </h2>
           <button
-            className="flex justify-center py-4 mt-4"
-            onClick={() => setIndex(0)}
+            id="navbutton1"
+            className="flex px-6 py-4 mt-4 w-full bg-blue-200"
+            onClick={() => {
+              setIndex(0);
+              document
+                .getElementById("navbutton1")
+                .classList.add("bg-blue-200");
+              document
+                .getElementById("navbutton2")
+                .classList.remove("bg-blue-200");
+              document
+                .getElementById("navbutton3")
+                .classList.remove("bg-blue-200");
+            }}
           >
             <FontAwesomeIcon icon={faHouse} size="lg" color="black" />
             <p className="px-3 text-xl text-brand-dark font-bold">Home</p>
           </button>
           <button
-            className="flex justify-evely py-4"
-            onClick={() => setIndex(1)}
+            id="navbutton2"
+            className="flex py-4 px-6 w-full"
+            onClick={() => {
+              setIndex(1);
+              document
+                .getElementById("navbutton2")
+                .classList.add("bg-blue-200");
+              document
+                .getElementById("navbutton1")
+                .classList.remove("bg-blue-200");
+              document
+                .getElementById("navbutton3")
+                .classList.remove("bg-blue-200");
+            }}
           >
             <FontAwesomeIcon icon={faCode} size="lg" color="black" />
             <p className="px-3 text-xl text-brand-dark font-bold">Forms</p>
           </button>
           <button
-            className="flex justify-evely py-4"
+            id="navbutton3"
+            className="flex px-6 py-4 w-full"
             onClick={() => {
               setIndex(2);
+              document
+                .getElementById("navbutton3")
+                .classList.add("bg-blue-200");
+              document
+                .getElementById("navbutton1")
+                .classList.remove("bg-blue-200");
+              document
+                .getElementById("navbutton2")
+                .classList.remove("bg-blue-200");
             }}
           >
             <FontAwesomeIcon icon={faServer} size="lg" color="black" />
             <p className="px-3 text-xl text-brand-dark font-bold">Tracking</p>
           </button>
           <button
-            className="flex justify-evely py-4 mt-96"
+            id="navbutton4"
+            className="flex px-6 py-4 mt-96"
             onClick={() => navigate("/")}
           >
             <FontAwesomeIcon
