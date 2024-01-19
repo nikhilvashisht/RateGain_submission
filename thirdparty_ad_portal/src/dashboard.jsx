@@ -28,6 +28,7 @@ import {
   IoBagOutline,
   IoSettingsOutline,
   IoChatbubbleOutline,
+  IoAnalyticsOutline,
 } from "react-icons/io5";
 
 // Dummy data for graph
@@ -707,6 +708,16 @@ const Dashboard = () => {
           >
             <IoBagOutline size={20} />
             <span>My Ads</span>
+          </button>
+          <button
+            onClick={() => setIndex(7)}
+            // style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={`${buttonBaseStyle} ${
+              index === 7 ? buttonActiveStyle : ""
+            }`}
+          >
+            <IoAnalyticsOutline size={20} />
+            <span>Analytics</span>
           </button>
           <button
             onClick={() => setIndex(3)}
