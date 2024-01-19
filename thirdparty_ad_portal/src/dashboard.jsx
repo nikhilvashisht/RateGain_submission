@@ -445,7 +445,7 @@ const PostAdForm = () => {
             {/* Upload Button */}
             <button
               onClick={handleImageUpload}
-              className="p-4 border rounded-lg bg-gray-200"
+              className="p-4 border rounded-lg bg-gray-200 hover:bg-gray-100"
             >
               +
             </button>

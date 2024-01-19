@@ -58,7 +58,7 @@ const LoginPage = () => {
                 Password
               </label>
               <input
-                // type="password"
+                type="password"
                 name="password"
                 id="password"
                 // autoComplete="current-password"
